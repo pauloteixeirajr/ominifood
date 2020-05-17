@@ -85,4 +85,19 @@ $(document).ready(function () {
       offset: '50%',
     }
   );
+
+  // Mobile navigation
+  $('.js--nav-icon').click(function () {
+    const nav = $('.js--main-nav');
+    const icon = $('.js--menu-icon');
+
+    nav.slideToggle(200);
+
+    // Update icons on toggle
+    if (icon.attr('name') === 'menu-sharp') {
+      icon.attr('name', 'close-sharp');
+    } else {
+      icon.attr('name', 'menu-sharp');
+    }
+  });
 });
